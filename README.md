@@ -1,2 +1,2 @@
-# LASO-app
-A language study app on the go
+# LASO APP
+
