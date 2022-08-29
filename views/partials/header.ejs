@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LASO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  
+  <div class="logo-bar">
+    <h1>LASO</h1>
+    <% if (user) { %>
+    <h4>Welcome, <a href="/users/<%= user._id %>>"><%= user.name %></a>!</h4>
+    <a href="/logout">Logout</a>
+    <% } else { %>
+    <a href="/auth/google">log in</a>
+    <% } %>
+  </div>
+
+  <nav class="deck menu">
+    <a href=""></a>
+  </nav>
+  <body></body>
+</html>
