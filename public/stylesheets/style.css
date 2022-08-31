@@ -90,6 +90,12 @@ form {
   align-items: center;
 }
 
+#form-btn {
+  background-color: #FFE9CA;
+  border: none;
+  color: #FB8987;
+}
+
 .form-inputs {
   border: none;
   background-color: #FFE9CA;

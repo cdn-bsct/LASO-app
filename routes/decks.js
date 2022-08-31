@@ -13,5 +13,6 @@ router.put('/:id', decksCtrl.updateCustom)
 router.post('/', decksCtrl.custom)
 router.post('/:id', decksCtrl.create)
 
-
+router.delete('/:id', decksCtrl.deleteCustom)
+router.delete('/:card/:id', decksCtrl.deleteCard)
 module.exports = router;

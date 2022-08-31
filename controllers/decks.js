@@ -9,6 +9,8 @@ module.exports = {
   customShow,
   create,
   updateCustom,
+  deleteCustom,
+  deleteCard,
 };
 
 function show(req, res) {
@@ -57,6 +59,22 @@ function updateCustom(req, res) {
   Custom.findById(req.params.id, function(err, deck) {
     deck.name = req.body.name;
     deck.save()
+    res.redirect(`/decks/custom/${req.params.id}`)
+  })
+}
+
+function deleteCustom(req, res) {
+
+}
+
+function deleteCard(req, res) {
+  Custom.findById(req.params.id, function(err, custom) {
+    custom.cards.forEach(function(el, idx) {
+      if (el.translation === req.params.card) {
+        custom.cards.splice(idx, 1)
+        custom.save()
+      }
+    });
     res.redirect(`/decks/custom/${req.params.id}`)
   })
 }
