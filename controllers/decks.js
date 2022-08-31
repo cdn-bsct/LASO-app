@@ -14,6 +14,7 @@ module.exports = {
 };
 
 function show(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   Deck.find({ type: req.params.deck }, function (err, char) {
     res.render("decks/show", {
       char: char,
@@ -23,6 +24,7 @@ function show(req, res) {
 }
 
 function customShow(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   Custom.findById( req.params.id , function(err, deck) {
     res.render('decks/custom', {
       user: req.user,
@@ -32,10 +34,12 @@ function customShow(req, res) {
 }
 
 function newCust(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   res.render("decks/new", { user: req.user });
 }
 
 function custom(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   googleId = req.user.googleId
   req.body.owner = googleId;
 
@@ -47,6 +51,7 @@ function custom(req, res) {
 }
 
 function create (req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   Custom.findById(req.params.id, function(err, custom) {
     custom.cards.push(req.body);
     custom.save(function(err) {
@@ -56,6 +61,7 @@ function create (req, res) {
 }
 
 function updateCustom(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   Custom.findById(req.params.id, function(err, deck) {
     deck.name = req.body.name;
     deck.save()
@@ -64,10 +70,15 @@ function updateCustom(req, res) {
 }
 
 function deleteCustom(req, res) {
-
+  if (!req.user) return res.redirect('/auth/google')
+  Custom.findByIdAndDelete(req.params.id, function(err, deck) {
+  })
+  console.log(Custom)
+  res.redirect('/users/show')
 }
 
 function deleteCard(req, res) {
+  if (!req.user) return res.redirect('/auth/google')
   Custom.findById(req.params.id, function(err, custom) {
     custom.cards.forEach(function(el, idx) {
       if (el.translation === req.params.card) {

@@ -84,6 +84,11 @@ a {
   margin: 2px;
 }
 
+.card-btn {
+  display: flex;
+  justify-content: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -94,6 +99,13 @@ form {
   background-color: #FFE9CA;
   border: none;
   color: #FB8987;
+}
+
+#delDeck-btn {
+  background-color: #d94773;
+  border: none;
+  color: #eee6fb;
+  margin-bottom: 10px;
 }
 
 .form-inputs {
@@ -107,7 +119,6 @@ form {
   border: #d94773;
   color: #e4d0ed;
   background-color: #d94773;
-  border-radius: 15%;
   width: 25%;
   margin-bottom: 10px;
 }

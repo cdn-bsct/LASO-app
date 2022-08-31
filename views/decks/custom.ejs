@@ -17,15 +17,24 @@
   <input type="text" name="name" class="form-inputs" />
   <input type="submit" name="" class="submit-inputs" />
 </form>
+<br />
+
+<form action="/decks/<%=deck._id%>?_method=DELETE" method="POST">
+    <button id="delDeck-btn">Delete <%=deck.name%> Deck</button>
+</form>
 
 <% deck.cards.forEach(el => { %>
 <div class="verb-card" id="">
   <%= el.character %>
   <br />
-  <a href=""><i class="material-icons">flip</i></a>
-  <form action="/decks/<%=el.translation%>/<%= deck._id%>?_method=DELETE" method="POST">
-   <button type="submit" id="form-btn"><i class="material-icons">delete</i></button>
-  </form>
+  <div class="card-btn">
+    <a href=""><i class="material-icons">flip</i></a>
+    <form action="/decks/<%=el.translation%>/<%= deck._id%>?_method=DELETE" method="POST">
+      <button type="submit" id="form-btn">
+        <i class="material-icons">delete</i>
+      </button>
+    </form>
+  </div>
 </div>
 
 <% }) %> <%- include('../partials/footer') %>
