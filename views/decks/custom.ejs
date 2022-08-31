@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+<h3>Add custom cards to <%= deck.name %></h3>
+<div id="cust-addform">
+  <form action="/decks/<%= deck._id %>" method="POST" autocomplete="off">
+    <label>Japanese:</label>
+    <input type="text" name="character" class="form-inputs" />
+    <label>English:</label>
+    <input type="text" name="translation" class="form-inputs" />
+    <label>Category:</label>
+    <input type="text" name="type" class="form-inputs" />
+    <input type="submit" class="submit-inputs" />
+  </form>
+</div>
+<br />
+<form action="/decks/<%=deck._id%>?_method=PUT" method="POST">
+  <label>Update Deck Name</label>
+  <input type="text" name="name" class="form-inputs" />
+  <input type="submit" name="" class="submit-inputs" />
+</form>
+
+<% deck.cards.forEach(el => { %>
+<div class="verb-card" id="">
+  <%= el.character %>
+  <br />
+  <form action="" method="POST">
+    <a href=""><i class="material-icons">flip</i></a>
+    <a href=""><i class="material-icons">delete</i></a>
+  </form>
+</div>
+
+<% }) %> <%- include('../partials/footer') %>

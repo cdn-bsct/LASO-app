@@ -1,45 +1,11 @@
 
-@media only screen and (max-width: 900px) {
-
-  body {
-    padding: 5px;
-    background-color: #FFE9CA;
-    font-size: 1px;
-  }
-
-  .logo-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: smaller;
-  }
-
-
-}
-
-@media only screen and (max-width: 500px) {
-
-  body {
-    padding: 10px;
-    background-color: #FFE9CA;
-  }
-
-  .logo-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: smaller;
-  }
-
-  .logo-bar > h1 {
-    font-size: medium;
-  }
-}
-
 body {
-
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FFE9CA;
+  font-family: Lucida Grande;
   color: #562151;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 a {
@@ -47,4 +13,276 @@ a {
   text-decoration: none;
 }
 
+.user-btn {
+  display: none;
+}
 
+.logo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+}
+
+.user-show {
+  font-size: 100px;
+  margin-top: 50px;
+}
+
+#laso-logo {
+  width: 50%;
+}
+
+#nav-menu {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.mid-exp {
+  text-align: center;
+}
+
+.bot-exp {
+  text-align: center;
+}
+
+
+#hira-img, #kata-img, #adj-img, #verb-img {
+  border-radius: 50%;
+  width: 20%;
+}
+
+.flashcards {
+  display: flex;
+}
+
+.card {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  width: 15%;
+  height: 50px;
+  padding: 12px, 0px;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.adj-card, .verb-card {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20%;
+  height: 50px;
+  padding: 12px 0px;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-inputs {
+  border: none;
+  background-color: #FFE9CA;
+  border-bottom: 2px solid #d94773;
+  margin: 5px;
+}
+
+.submit-inputs {
+  border: #d94773;
+  color: #e4d0ed;
+  background-color: #d94773;
+  border-radius: 15%;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.custom-decks {
+  display: flex;
+}
+
+.add-deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4d0ed;
+  font-size: 40px;
+  width: 15%;
+  height: 150px;
+  border: 1px solid #eee6fb ;
+  border-radius: 25%;
+}
+
+.cust-deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4d0ed;
+  font-size: 18px;
+  width: 15%;
+  height: 150px;
+  border: 1px solid #eee6fb ;
+  border-radius: 25%;
+}
+
+/* ---------- 900 SCREEN CODE ------------------------------ */
+@media only screen and (max-width: 900px) {
+
+  body {
+    padding: 5px;
+    background-color: #FFE9CA;
+    font-size: medium;
+  }
+
+  .user-btn {
+    display: none;
+  }
+
+  .logo-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+  }
+
+  #laso-logo {
+    width: 25px;
+  }
+
+  #nav-menu {
+    display: flex;
+
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: inline-flex;
+    width: 100%;
+  }
+  
+  .main-exp {
+    text-align: center;
+  }
+
+  .flashcards {
+    display: flex;
+  }
+
+  .card {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 20%;
+    height: 50px;
+    padding-top: 25px;
+    border: 1px solid black;
+    margin: 2px;
+  }
+
+  .adj-card, .verb-card {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 30%;
+    height: 50px;
+    padding-top: 25px;
+    border: 1px solid black;
+    margin: 2px;
+  }
+
+}
+
+.add-deck {
+  width: 15%;
+  height: 100px;
+}
+
+.cust-deck {
+  width: 15%;
+  height: 100px;
+}
+
+/* ---------- 500 SCREEN CODE ------------------------------ */
+@media only screen and (max-width: 500px) {
+
+  body {
+    padding: 10px;
+    background-color: #FFE9CA;
+    font-size: small;
+  }
+
+  .welcome-msg {
+    display: none;
+  }
+
+  .user-btn {
+    display: block;
+    font-size: 30px;
+  }
+  .logo-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+  }
+
+  #laso-logo {
+    width: 25px;
+  }
+
+  #nav-menu {
+    display: flex;
+    
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: inline-flex;
+    width: 100%;
+    padding: 0px;
+  }
+
+  #hira-img, #kata-img, #adj-img, #verb-img {
+    width:40%;
+  }
+  
+  .flashcards {
+    display: flex;
+  }
+
+  .card {
+    width: 20%;
+    height: 50px;
+  }
+
+  .adj-card {
+    width: 40%;
+    height: 50px;
+  }
+
+  .verb-card {
+    width: 50%;
+    height: 50px;
+  }
+
+  .add-deck {
+    width: 25%;
+    height: 75px;
+  }
+
+  .cust-deck {
+  width: 25%;
+  height: 75px;
+  }
+
+
+}

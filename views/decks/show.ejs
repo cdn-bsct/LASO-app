@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+
+<% if (char[0].type === 'adjective') { %>
+
+    <% char.forEach(el => { %> 
+        <div class="adj-card" id="<%= el._id %>"><%= el.character %></div> 
+    <% }) %>
+
+<% } else if (char[0].type === 'verb') { %>
+
+    <% char.forEach(el => { %> 
+        <div class="verb-card" id="<%= el._id %>"><%= el.character %></div> 
+    <% }) %>
+
+<% } else {%>
+
+    <% char.forEach(el => { %> 
+        <div class="card" id="<%= el._id %>"><%= el.character %></div> 
+    <% }) %>
+
+<% } %>
+
+
+
+<%- include('../partials/footer') %>

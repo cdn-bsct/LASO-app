@@ -7,4 +7,10 @@ var deckSchema = new Schema ({
     type: String,
 })
 
+var customSchema = new Schema ({
+    name: String,
+    owner: String,
+    cards: [deckSchema],
+})
+
 module.exports = mongoose.model('Decks', deckSchema)

@@ -3,21 +3,38 @@
   <head>
     <title>LASO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- <i class="material-icons">add</i> -->
     <link rel="stylesheet" href="/stylesheets/style.css" />
+
   </head>
-  
   <div class="logo-bar">
-    <h1>LASO</h1>
+    <!-- <h1>LASO</h1> -->
+    <a href="/" title="lasso icons" class="laso-logo-a">
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/815/815498.png"
+        alt="laso"
+        id="laso-logo"
+      />
+    </a>
     <% if (user) { %>
-    <h4>Welcome, <a href="/users/<%= user._id %>>"><%= user.name %></a>!</h4>
-    <a href="/logout">Logout</a>
+    <h4 class="welcome-msg">Welcome, <a href="/users/<%= user._id %>>"><%= user.name %></a>!</h4>
+    <a href="/users/<%= user._id %>>"><i class="material-icons user-btn">person_outline</i></a>
+    <a href="/logout" id="logout-btn">Logout</a>
     <% } else { %>
     <a href="/auth/google">log in</a>
     <% } %>
   </div>
 
-  <nav class="deck menu">
-    <a href=""></a>
+
+  <nav id="nav-menu">
+    <ul class="nav-list">
+      <li><a href="/" class="nav-home-jp">Home</a></li>
+      <li><a href="/decks/hiragana" class="nav-char-jp">Hiragana</a></li>
+      <li><a href="/decks/katakana" class="nav-char-jp">Katakana</a></li>
+      <li><a href="/decks/adjective" class="nav-adj-jp">Adj.</a></li>
+      <li><a href="/decks/verb" class="nav-verb-jp">Verbs</a></li>
+    </ul>
+    
   </nav>
-  <body></body>
-</html>
+  <body>

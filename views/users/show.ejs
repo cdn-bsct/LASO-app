@@ -1,5 +1,18 @@
-<%- include('../partials/header') %>
-<% console.log(user) %>
+<%- include('../partials/header') %> 
+
+<i class="material-icons user-show">person_pin</i>
+<h1><%= user.name %></h1>
+<h3><%= user.email %></h3>
+<div class="custom-decks">
+    <div class="add-deck"><a href="/decks/new"> + </a></div>
+    <% if (custom !== undefined) { %>
+        <% custom.forEach(el => { %> 
+            <div class="cust-deck"><a href="/decks/custom/<%= el._id %>"><%= el.name %></a></div> 
+        <% }) %>   
+        <% } else { %>
+        <% custom = null %>    
+    <% } %> 
+</div>
 
 
 <%- include('../partials/footer') %>
