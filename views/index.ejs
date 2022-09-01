@@ -8,9 +8,15 @@
   <h4>Language Deck: Japanese</h4>
 </div>
 <% if (user) { %>
-    <p>jump into one of your study decks below:</p>
+  <div id="user-msg">
+   <h3>Welcome, <%= user.name %>! </h3>
+   <h4>Check your profile for custom decks! or enjoy our pre-defined decks!</h4>
+   <h4>Happy Studying! </h4>
+  </div>
+   
 <div class="bot-exp">
-    
+
+</div>
 </div>   
 <% } %>
 <%- include('./partials/footer') %>

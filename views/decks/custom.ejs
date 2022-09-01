@@ -20,21 +20,24 @@
 <br />
 
 <form action="/decks/<%=deck._id%>?_method=DELETE" method="POST">
-    <button id="delDeck-btn">Delete <%=deck.name%> Deck</button>
+  <button id="delDeck-btn">Delete <%=deck.name%> Deck</button>
 </form>
 
 <% deck.cards.forEach(el => { %>
-<div class="verb-card" id="">
-  <%= el.character %>
-  <br />
+
+<div class="verb-card" id="flip-card">
+    <div class="card-front <%= el.character && el.translation %>" id="display-card"><%= el.character %></div>
+    <!-- <div class="card-back"><%= el.translation %></div> -->
+
   <div class="card-btn">
-    <a href=""><i class="material-icons">flip</i></a>
+    <button id="flip-btn"><i class="material-icons">flip</i></button>
+
     <form action="/decks/<%=el.translation%>/<%= deck._id%>?_method=DELETE" method="POST">
-      <button type="submit" id="form-btn">
-        <i class="material-icons">delete</i>
-      </button>
-    </form>
+      <button type="submit" id="form-btn"><i class="material-icons">delete</i></button>
+    </form> 
   </div>
 </div>
+<% }) %>
 
-<% }) %> <%- include('../partials/footer') %>
+
+<%- include('../partials/footer') %>

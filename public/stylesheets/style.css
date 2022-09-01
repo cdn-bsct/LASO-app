@@ -29,6 +29,10 @@ a {
   margin-top: 50px;
 }
 
+#user-msg {
+  color: #d94773;
+  border: 1px dashed #FB8987;
+}
 #laso-logo {
   width: 50%;
 }
@@ -44,11 +48,7 @@ a {
   width: 100%;
 }
 
-.mid-exp {
-  text-align: center;
-}
-
-.bot-exp {
+.mid-exp, .bot-exp {
   text-align: center;
 }
 
@@ -56,21 +56,6 @@ a {
 #hira-img, #kata-img, #adj-img, #verb-img {
   border-radius: 50%;
   width: 20%;
-}
-
-.flashcards {
-  display: flex;
-}
-
-.card {
-  display: inline-block;
-  font-size: 22px;
-  font-weight: bold;
-  width: 15%;
-  height: 50px;
-  padding: 12px, 0px;
-  border: 1px solid black;
-  margin: 2px;
 }
 
 .adj-card, .verb-card {
@@ -82,6 +67,19 @@ a {
   padding: 12px 0px;
   border: 1px solid black;
   margin: 2px;
+}
+
+#eng, #jpn {
+  display:inline-flex;
+  margin: 0px;
+}
+
+#jpn {
+  color: #FFE9CA;
+}
+
+#jpn:hover {
+  color:#d94773
 }
 
 .card-btn {
@@ -96,6 +94,12 @@ form {
 }
 
 #form-btn {
+  background-color: #FFE9CA;
+  border: none;
+  color: #FB8987;
+}
+
+#flip-btn {
   background-color: #FFE9CA;
   border: none;
   color: #FB8987;
@@ -272,10 +276,6 @@ form {
     width:40%;
   }
   
-  .flashcards {
-    display: flex;
-  }
-
   .card {
     width: 20%;
     height: 50px;
@@ -284,11 +284,13 @@ form {
   .adj-card {
     width: 40%;
     height: 50px;
+    font-size: 14px;
   }
 
   .verb-card {
     width: 50%;
     height: 50px;
+    font-size: 14px;
   }
 
   .add-deck {

@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const passport = require("passport");
+const Custom = require("../models/custom")
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -8,6 +9,7 @@ router.get("/", function (req, res, next) {
     title: "Express",
     user: req.user,
     name: req.query.name,
+    custom: Custom,
   });
 });
 

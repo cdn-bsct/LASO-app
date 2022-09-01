@@ -5,9 +5,12 @@
 <h3><%= user.email %></h3>
 <div class="custom-decks">
     <div class="add-deck"><a href="/decks/new"> + </a></div>
+
     <% if (custom !== undefined) { %>
         <% custom.forEach(el => { %> 
-            <div class="cust-deck"><a href="/decks/custom/<%= el._id %>"><%= el.name %></a></div> 
+            <div class="cust-deck">
+                <a href="/decks/custom/<%= el._id %>"><%= el.name %></a>
+            </div> 
         <% }) %>   
         <% } else { %>
         <% custom = null %>    
