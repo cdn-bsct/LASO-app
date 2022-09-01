@@ -13,7 +13,7 @@
 <% } else if (char[0].type === 'verb') { %>
 
     <% char.forEach(el => { %> 
-        <div class="adj-card" id="<%= el._id %>">
+        <div class="verb-card" id="<%= el._id %>">
             <p id="eng"><%= el.character %></p> <br>
             <p id="jpn"><%= el.translation %></p>
         </div>   
@@ -30,6 +30,24 @@
 
 <% } %>
 
+<script>
+    let translation = document.getElementById('jpn')
+    let adj = document.querySelectorAll('.adj-card')
+    let verb = document.querySelectorAll('.verb-card')
+    let alphabet = document.querySelectorAll('.card')
+
+    translation.setAttribute('class', 'inactive')
+
+    adj.addEventListener('click', function(el) {
+        if (translation.classList == "inactive" ) {
+            translation.style.setProperty('color', '#d94773')
+        } else {
+            translation.classList = "inactive"
+            translation.style.setProperty('color', '#FFE9CA')
+        }
+    })
+
+</script>
 
 
 <%- include('../partials/footer') %>
