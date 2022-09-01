@@ -80,6 +80,21 @@ a {
   margin: 2px;
 }
 
+.card {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  width: 10%;
+  height: 50px;
+  padding-top: 25px;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.adj-card, .verb-card, .cust-card, .card:hover {
+  border: 2px dashed #e4d0ed;
+}
+
 #eng, #jpn {
   display:inline-flex;
   margin: 0px;
