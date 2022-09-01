@@ -25,18 +25,19 @@
 
 <% deck.cards.forEach(el => { %>
 
-<div class="verb-card" id="flip-card">
-    <div class="card-front <%= el.character && el.translation %>" id="display-card"><%= el.character %></div>
-    <!-- <div class="card-back"><%= el.translation %></div> -->
+<div class="cust-card" id="flip-card">
+    <div class="card-front" id="display-card">
+      <p id="eng"><%= el.character %></p> <br>
+      <p id="jpn"><%= el.translation %></p>
+    </div>
 
   <div class="card-btn">
-    <button id="flip-btn"><i class="material-icons">flip</i></button>
-
     <form action="/decks/<%=el.translation%>/<%= deck._id%>?_method=DELETE" method="POST">
       <button type="submit" id="form-btn"><i class="material-icons">delete</i></button>
     </form> 
   </div>
 </div>
+
 <% }) %>
 
 

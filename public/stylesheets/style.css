@@ -69,6 +69,17 @@ a {
   margin: 2px;
 }
 
+.cust-card {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  width: 60%;
+  height: 50px;
+  padding: 12px 0px;
+  border: 1px solid black;
+  margin: 2px;
+}
+
 #eng, #jpn {
   display:inline-flex;
   margin: 0px;
