@@ -64,7 +64,7 @@ a {
   font-weight: bold;
   width: 20%;
   height: 50px;
-  padding: 12px 0px;
+  padding: 8px 0px;
   border: 1px solid black;
   margin: 2px;
 }
@@ -75,7 +75,7 @@ a {
   font-weight: bold;
   width: 60%;
   height: 50px;
-  padding: 12px 0px;
+  padding: 8px 0px;
   border: 1px solid black;
   margin: 2px;
 }
@@ -86,25 +86,29 @@ a {
   font-weight: bold;
   width: 10%;
   height: 50px;
-  padding-top: 25px;
+  padding-top: 15px;
   border: 1px solid black;
   margin: 2px;
 }
 
 .card:hover {
-  border: 2px dashed #e4d0ed;
+  border: 2px dashed #562151;
+  background-color: #e4d0ed;
 }
 
 .adj-card:hover {
-  border: 2px dashed #e4d0ed;
+  border: 2px dashed #562151;
+  background-color: #e4d0ed;
 }
 
 .verb-card:hover {
-  border: 2px dashed #e4d0ed;
+  border: 2px dashed #562151;
+  background-color: #e4d0ed;
 }
 
  .cust-card:hover {
-  border: 2px dashed #e4d0ed;
+  border: 2px dashed #562151;
+  background-color: #e4d0ed;
 }
 
 #eng, #jpn {
@@ -114,6 +118,8 @@ a {
 
 #jpn {
   color: #FFE9CA;
+  border: 1px dashed #d94773;
+  padding: 0px 4px;
 }
 
 #jpn:hover {
