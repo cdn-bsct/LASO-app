@@ -30,24 +30,6 @@
 
 <% } %>
 
-<script>
-    let translation = document.getElementById('jpn')
-    let adj = document.querySelectorAll('.adj-card')
-    let verb = document.querySelectorAll('.verb-card')
-    let alphabet = document.querySelectorAll('.card')
-
-    translation.setAttribute('class', 'inactive')
-
-    adj.addEventListener('click', function(el) {
-        if (translation.classList == "inactive" ) {
-            translation.style.setProperty('color', '#d94773')
-        } else {
-            translation.classList = "inactive"
-            translation.style.setProperty('color', '#FFE9CA')
-        }
-    })
-
-</script>
 
 
 <%- include('../partials/footer') %>
