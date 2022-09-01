@@ -91,7 +91,19 @@ a {
   margin: 2px;
 }
 
-.adj-card, .verb-card, .cust-card, .card:hover {
+.card:hover {
+  border: 2px dashed #e4d0ed;
+}
+
+.adj-card:hover {
+  border: 2px dashed #e4d0ed;
+}
+
+.verb-card:hover {
+  border: 2px dashed #e4d0ed;
+}
+
+ .cust-card:hover {
   border: 2px dashed #e4d0ed;
 }
 
